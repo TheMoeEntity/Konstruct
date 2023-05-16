@@ -1,0 +1,41 @@
+.hero {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding-bottom: 150px;
+}
+.blob > div {
+    position: relative;
+    width: 50px;
+    height: 44px;
+}
+.blob {
+    position: absolute;
+    top: 15%;
+    width: fit-content;
+    height: fit-content;
+}
+.caption {
+    margin-left: 70px;
+    width: 40%;
+    margin-top: 45px;
+}
+.caption:nth-child(2) {
+    margin-top: 60px !important;
+}
+.caption h1 {
+    font-size: 45px;
+    line-height: 1.2;
+    font-weight: 550;
+}
+.caption p {
+    font-weight: 100;
+    margin-top: 40px;
+}
+.caption button {
+    border: none;
+    background-color: #FFB703;
+    padding: 20px 20px;
+    margin-top: 40px;
+    font-weight: bold;
+}
