@@ -47,6 +47,11 @@
     display: flex;
 
 }
-.check button {
+.about button {
     color: black;
+    margin-top: 50px;
+    padding: 20px 30px;
+    border: none;
+    background: #FFB703;
+    font-weight: bolder;
 }

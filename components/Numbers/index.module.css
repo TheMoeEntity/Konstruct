@@ -1,0 +1,62 @@
+.numbers {
+    width: 100%;
+    background-image: url('/images/counter-bg.jpeg');
+    background-size: cover;
+    height: 600px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.grid {
+    width: 88%;
+    height: 66%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.grid  span {
+    color: #FFB703;
+}
+.grid h2 {
+    line-height: 1.40;
+    font-size: 35px;
+    margin-top: 25px;
+}
+.grid > div p {
+    margin: 25px 0;
+}
+.grid button {
+    background-color: #FFB703;
+    padding: 20px 30px;
+    font-weight: bolder;
+    font-size: 16.5px;
+    margin-top: 25px;
+}
+.grid > div:nth-child(2) {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 50%;
+    height: 100%;
+}
+.grid > div:nth-child(2) > div {
+    background: #FFB7031F;
+    clip-path: polygon(15% 0%, 100% 0, 100% 20%, 100% 74%, 85% 100%, 0 100%, 0% 80%, 0% 25%);
+    width: 48%;
+    height: 43%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    padding-left: 25px;
+}
+.grid > div:nth-child(2) > div span:nth-child(1) {
+    color:#FFB703;
+    font-size: 40px;
+    font-weight: bolder;
+    margin-bottom: 15px;
+}
+.grid > div:nth-child(2) > div span:nth-child(2) {
+    color: white;
+}
