@@ -2,6 +2,7 @@ import Head from 'next/head'
 import About from '../components/About'
 import Benefits from '../components/Benefits'
 import Hero from '../components/Hero'
+import Latest from '../components/Latest'
 import Numbers from '../components/Numbers'
 import Products from '../components/Projects'
 
@@ -20,6 +21,7 @@ export default function Home() {
         <Products />
         <Numbers />
         <Benefits />
+        <Latest />
       </main>
     </>
   )

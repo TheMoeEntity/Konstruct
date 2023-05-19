@@ -1,14 +1,15 @@
 .benefits {
     width: 100%;
-    height: 650px;
+    height: 700px;
     display: flex;
     flex-flow: row wrap;
+    transition: 0.5s;
 
 }
 .benefits h2 {
     font-size: 36px;
     margin-top: 20px;
-    width: 70%;
+    width: 75%;
     line-height: 1.35;
 }
 .benefits > div {
@@ -16,17 +17,67 @@
     height: 100%;
 }
 .benefits > div:nth-child(2) {
+    overflow: hidden;
+}
+.benefits > div:nth-child(2) > div {
     background-image: url('/images/tabs-images.png');
     background-size: cover;
+    width: 100%;
+    height: 100%;
+    transition: 0.4s;
 }
 .benefits > div:nth-child(1) {
-    padding-top: 40px;
-    padding-left: 30px;
+    padding: 40px 30px;
 }
 .benefits > div:nth-child(1) span {
     font-weight: bold;
     margin-left: 15px;
+    color: #FFB703;
 }
 .caption {
-    margin-top:80px;
+    margin-top:70px;
+}
+.accordion {
+    height: auto;
+    width: 100%;
+    margin-top: 30px;
+    transition: 0.5s;
+}
+
+.first {
+    width: 100%;
+    height: auto;
+    background-color:white;
+}
+.first > div:nth-child(1) {
+    width: 100%;
+    height: 70px;
+    background-color: #FFB703;
+    background-color: black;
+    color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 17px;
+    padding-left: 20px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.first > div:nth-child(2) {
+    width: 100%;
+    height: 20px;
+    background: transparent;
+    transition: 0.35s;
+}
+.first > div:nth-child(3) {
+    width: 100%;
+    height: 150px;
+    background-color: #F1F1F1;
+    padding: 0px 40px;
+    line-height: 1.75;
+    font-size: 17.5;
+    max-height: 0px;
+    overflow: hidden;
+    transition: 0.35s;
 }
