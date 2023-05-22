@@ -1,10 +1,12 @@
 import Head from 'next/head'
 import About from '../components/About'
 import Benefits from '../components/Benefits'
+import Choose from '../components/Choose'
 import Hero from '../components/Hero'
 import Latest from '../components/Latest'
 import Numbers from '../components/Numbers'
 import Products from '../components/Projects'
+import Reviews from '../components/Reviews'
 
 export default function Home() {
   return (
@@ -22,6 +24,8 @@ export default function Home() {
         <Numbers />
         <Benefits />
         <Latest />
+        <Choose />
+        <Reviews />
       </main>
     </>
   )

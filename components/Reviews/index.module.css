@@ -1,0 +1,95 @@
+.reviews {
+    background-color: #E8EAEE;
+    height: 900px;
+    width: 100%;
+    padding-top: 150px;
+}
+.reviews h2 {
+    font-size: 35px;
+    margin: 15px 10px;
+}
+.reviews span {
+    font-weight: bold;
+    margin-left: 25px;
+}
+.grid {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 595px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.grid > div {
+    width: 48%;
+    height: 100%;
+    position: relative;
+}
+.slide {
+    background-color: white;
+    margin-top: 30px;
+    width: 100%;
+    pointer-events: none;
+    height: 490px;
+    position: relative;
+    scroll-behavior: smooth;
+}
+.slide > div {
+    width: 100%;
+    height:100%;
+    transition: 0.5s;
+}
+.slide > div span {
+    font-size: 65px;
+    display: block;
+    margin-top: 15px;
+    color: #FFB703;
+}
+.slide > div p {
+    padding:30px 40px;
+    line-height: 2.0;
+    font-size:17.5px;
+}
+ .buttons {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 120px;
+    height: 45px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    z-index: 9;
+}
+.buttons > div {
+    width: 48%;
+    height: 100%;
+    background-color:  #FFB703;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.buttons > div:hover {
+    background-color: black;
+    color: white;
+}
+.profile {
+    margin-top: 0px;
+    margin-left: 30px;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.capt {
+    padding: 20px 40px;
+}
+.capt strong {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 17.5px;
+}

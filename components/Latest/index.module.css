@@ -4,7 +4,7 @@
     background: #E8EAEE;
     padding: 10px;
     padding-top: 60px;
-    min-height: 1100px;
+    min-height: 1250px;
     font-size: 19px;
 }
 .caption {
@@ -23,7 +23,7 @@
     position: absolute;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     
 }
 
@@ -31,6 +31,7 @@
     width: 350px;
     height: 340px;
     margin-top: 40px;
+    margin-left: 12px;
     position: relative;
     cursor: pointer;
     overflow: hidden;

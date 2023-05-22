@@ -1,14 +1,39 @@
 import styles from "./index.module.css";
 import Image from "next/image";
-import worker from "../../public/images/servic-1.jpeg";
-import worker2 from "../../public/images/servic-2.jpeg";
-import worker3 from "../../public/images/servic-3.jpeg";
-import worker4 from "../../public/images/servic-4.jpeg";
-import worker5 from "../../public/images/servic-5.jpeg";
-import worker6 from "../../public/images/servic-6.jpeg";
 import icon from "../../public/images/service-icon1.png";
+import { AnimatePresence, motion } from "framer-motion";
+import data from "./data";
+import { useState } from "react";
 
 const Latest = () => {
+  const [displayData, setDisplayData] = useState(data);
+  const [active, setActive] = useState("ALL");
+  const filter = [
+    "ALL",
+    "ARCHITECTURE",
+    "INTERIORS",
+    "HOUSE & EXTERIOR",
+    "HOUSE RENOVATION",
+  ];
+
+  const handleFilter = (category) => {
+    if (category === active) return;
+    setActive(category);
+    setDisplayData([]);
+
+    if (category === "all") {
+      setDisplayData(data);
+      return;
+    }
+
+    const filteredData = data.filter(
+      (item) => item.category === category
+    );
+
+    setTimeout(() => {
+      setDisplayData(filteredData);
+    }, 400);
+  };
   return (
     <div className={styles.products}>
       <div className={styles.caption}>
@@ -16,200 +41,57 @@ const Latest = () => {
         <h2>Latest completed projects</h2>
 
         <div className={styles.tile}>
-          <div>ALL</div>
-          <div>ARCHITECTURE</div>
-          <div>HOUSE & EXTERIOR</div>
-          <div>HOUSE RENOVATION</div>
-          <div>INTERIORS</div>
+          {filter.map((x, i) => (
+            <div onClick={() => handleFilter(x.toLocaleLowerCase())} key={i}>
+              {x}
+            </div>
+          ))}
         </div>
       </div>
       <div className={styles.grid}>
-        <div>
-          <Image
-            src={worker}
-            objectFit="cover"
-            alt="card-image"
-            layout="fill"
-            quality={100}
-            priority={true}
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          />
-          <div className={styles.tab}>
-            <span>
-              Blue Glass Building <br />
-              <span style={{ fontWeight: "lighter" }}> Architecture</span>
-            </span>
+        <AnimatePresence>
+          {displayData.map((x, i) => (
+            <motion.div
+              style={{ overflow: "hidden" }}
+              key={i}
+              layout
+              initial={{ transform: "scale(0)" }}
+              animate={{ transform: "scale(1)" }}
+              exit={{ transform: "scale(0)" }}
+            >
+              <Image
+                src={x.img}
+                objectFit="cover"
+                alt="card-image"
+                layout="fill"
+                quality={100}
+                priority={true}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              />
+              <div className={styles.tab}>
+                <span>
+                  Blue Glass Building <br />
+                  <span style={{ fontWeight: "lighter" }}> {x.category}</span>
+                </span>
 
-            <div className={styles.icon}>
-              <div>
-                <Image
-                  src={icon}
-                  objectFit="cover"
-                  alt="card-image"
-                  layout="fill"
-                  quality={100}
-                  priority={true}
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                />
+                <div className={styles.icon}>
+                  <div>
+                    <Image
+                      src={icon}
+                      objectFit="cover"
+                      alt="card-image"
+                      layout="fill"
+                      quality={100}
+                      priority={true}
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    />
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <Image
-            src={worker2}
-            objectFit="cover"
-            alt="card-image"
-            layout="fill"
-            quality={100}
-            priority={true}
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          />
-          <div className={styles.tab}>
-            <span>
-              Blue Glass Building <br />
-              <span style={{ fontWeight: "lighter" }}> Architecture</span>
-            </span>
-            <div className={styles.icon}>
-              <div>
-                <Image
-                  src={icon}
-                  objectFit="cover"
-                  alt="card-image"
-                  layout="fill"
-                  quality={100}
-                  priority={true}
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <Image
-            src={worker3}
-            objectFit="cover"
-            alt="card-image"
-            layout="fill"
-            quality={100}
-            priority={true}
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          />
-          <div className={styles.tab}>
-            <span>
-              Blue Glass Building <br />
-              <span style={{ fontWeight: "lighter" }}> Architecture</span>
-            </span>
-            <div className={styles.icon}>
-              <div>
-                <Image
-                  src={icon}
-                  objectFit="cover"
-                  alt="card-image"
-                  layout="fill"
-                  quality={100}
-                  priority={true}
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <Image
-            src={worker4}
-            objectFit="cover"
-            alt="card-image"
-            layout="fill"
-            quality={100}
-            priority={true}
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          />
-          <div className={styles.tab}>
-            <span>
-              Blue Glass Building <br />
-              <span style={{ fontWeight: "lighter" }}> Architecture</span>
-            </span>
-            <div className={styles.icon}>
-              <div>
-                <Image
-                  src={icon}
-                  objectFit="cover"
-                  alt="card-image"
-                  layout="fill"
-                  quality={100}
-                  priority={true}
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <Image
-            src={worker5}
-            objectFit="cover"
-            alt="card-image"
-            layout="fill"
-            quality={100}
-            priority={true}
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          />
-          <div className={styles.tab}>
-            <span>
-              Blue Glass Building <br />
-              <span style={{ fontWeight: "lighter" }}> Architecture</span>
-            </span>
-            <div className={styles.icon}>
-              <div>
-                <Image
-                  src={icon}
-                  objectFit="cover"
-                  alt="card-image"
-                  layout="fill"
-                  quality={100}
-                  priority={true}
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <Image
-            src={worker6}
-            objectFit="cover"
-            alt="card-image"
-            layout="fill"
-            quality={100}
-            priority={true}
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          />
-          <div className={styles.tab}>
-            <span>
-              Blue Glass Building <br />
-              <span style={{ fontWeight: "lighter" }}> Architecture</span>
-            </span>
-            <div className={styles.icon}>
-              <div>
-                <Image
-                  src={icon}
-                  objectFit="cover"
-                  alt="card-image"
-                  layout="fill"
-                  quality={100}
-                  priority={true}
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
+            </motion.div>
+          ))}
+        </AnimatePresence>
+        {}
       </div>
     </div>
   );

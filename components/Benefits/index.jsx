@@ -15,6 +15,7 @@ const Benefits = () => {
       child.children[2].style.maxHeight = "0";
       child.children[0].style.background = "black";
       child.children[0].style.color = "white";
+      child.children[1].style.background = 'transparent'
     }
 
     e.target.style.background =
@@ -42,7 +43,7 @@ const Benefits = () => {
           <h2>Build better futures with steady focus on quality</h2>
           <div ref={container} className={styles.accordion}>
             <div className={styles.first}>
-              <div onClick={(e) => accordion(e)}>
+              <div onClick={e => accordion(e)}>
                 <span><i className="fas fa-plus"></i></span> &nbsp;&nbsp;&nbsp; We are a global family that values
                 diversity.
               </div>
@@ -54,7 +55,7 @@ const Benefits = () => {
               </div>
             </div>
             <div className={styles.first}>
-              <div onClick={(e) => accordion(e)}>
+              <div onClick={e => accordion(e)}>
               <span><i className="fas fa-plus"></i></span> &nbsp;&nbsp;&nbsp; We own and shape our future.
               </div>
               <div></div>
@@ -65,7 +66,7 @@ const Benefits = () => {
               </div>
             </div>
             <div className={styles.first}>
-              <div onClick={(e) => accordion(e)}>
+              <div onClick={e => accordion(e)}>
               <span><i className="fas fa-plus"></i></span> &nbsp;&nbsp;&nbsp; We create sustainable growth.
               </div>
               <div></div>

@@ -1,0 +1,127 @@
+.choose {
+    width: 100%;
+    height: 700px;
+    display: flex;
+    flex-flow: row wrap;
+}
+.choose > div {
+    width: 50%;
+    height: 100%;
+}
+.choose > div:nth-child(1) {
+    overflow: hidden;
+}
+.choose > div:nth-child(1) > div {
+    background-image: url('/images/video1g1.png');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    transition: 0.4s;
+}
+.choose > div:nth-child(2) {
+    padding: 30px 20px;
+}
+.choose div span {
+    margin-top: 60px;
+    display: block;
+    margin-left: 20px;
+}
+.choose div h2 {
+    margin-left: 20px;
+    margin-top: 15px;
+    line-height: 1.35;
+    font-size: 36px;
+    width: 78%;
+}
+.choose > div:nth-child(2) p {
+    margin-top: 15px;
+    margin-left: 20px;
+    width: 80%;
+}
+.why {
+    display: flex;
+    margin-left: 0px;
+    width:85%;
+    height: auto;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.why > div {
+    width: fit-content;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-weight: bold;
+
+}
+.why > div > span:nth-child(1) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFB703;
+    font-weight: bolder;
+    font-size: 18px;
+    width: 40px ;
+    height: 40px;
+    border-radius: 50%;
+}
+.skill {
+    margin-top: 60px;
+    margin-left: 20px;
+    width: 90%;
+    height: 40px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.rating {
+    margin-top: 10px;
+    margin-left: 20px;
+    width: 90%;
+    height: 40px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+.rating > div:nth-child(2) {
+    width: 30%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    align-items: center;
+    color: #FFB703;
+    transform: translateX(-160px);
+}
+
+.skill > div:nth-child(1) {
+    width: fit-content;
+    height: fit-content;
+    font-weight: bold;
+}
+.skill > div:nth-child(2) {
+    width: 60%;
+    height: 7.5px;
+    border-radius: 3px;
+    background-color: #f1f1f1;
+    transition: 1.2s;
+
+}
+.skill > div:nth-child(2) > div {
+    width: 95%;
+    background-color: #FFB703;
+    height: 100%;
+    border-radius: 3px;
+    position: relative;
+    transition: 1.2s;
+}
+.skill > div:nth-child(2) > div > div {
+    margin-top: -25px;
+    float: right;
+    transition: 1.2s;
+}
