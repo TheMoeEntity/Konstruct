@@ -1,0 +1,108 @@
+.news {
+    width: 100%;
+    background-color: white;
+    height: auto;
+}
+.title {
+    margin: 40px auto;
+    width: fit-content;
+    padding: 20px 15px;
+    text-align: center;
+}
+.title span {
+    font-weight: bolder;
+}
+.title h2 {
+    font-size: 35px;
+    margin-top: 20px;
+    width: 70%;
+    line-height: 1.35;
+    margin-left: auto;
+    margin-right: auto;
+}
+.grid {
+    width: 85%;
+    height: auto;
+    margin: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.grid > div {
+    width: 340px;
+    height: 450px;
+    box-shadow: 5px 9px 15px 0 rgba(179, 179, 179, 0.2);
+    border-radius: 12px;
+    /* overflow: hidden; */
+}
+.grid > div .img {
+    width: 100%;
+    height: 190px;
+    position: relative;
+}
+.grid > div .capt {
+    width: 100%;
+    height: 260px;
+    padding: 20px 35px;
+}
+.date {
+    width: 100%;
+    height: 40px;
+    margin: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.date i {
+    margin-right: 12px;
+    color: #FFB703;
+}
+.grid > div p {
+    font-weight: bolder;
+    line-height: 1.6;
+    font-weight: bolder;
+    font-size: 19.5px;
+    padding: 0 1.5px;
+}
+.grid > div button {
+    background-color: #FFB703;
+    color: black;
+    padding: 18px 20px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+.upcoming {
+    width: 100%;
+    height: 450px;
+    background-image: url('/images/cta-bg.jpeg');
+    background-size: cover;
+    background-position: center;
+    padding-top: 20px;
+    margin-top: 150px;
+}
+.upcoming .title {
+    color: white;
+    width: fit-content;
+    padding: 20px 25px;
+    text-align: center;
+}
+.upcoming .title span {
+    color: #FFB703;
+}
+.upcoming .title h2 {
+    width: 100% !important;
+}
+.upcoming .title p {
+    width: 65%;
+    margin: 20px auto;
+    line-height: 1.8;
+}
+.upcoming .title button {
+    background-color: #FFB703;
+    color: black;
+    font-weight: bold;
+    font-size:18px;
+    margin-top: 40px;
+    padding: 18px 25px;
+}

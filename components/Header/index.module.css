@@ -57,6 +57,7 @@
     margin: 0 15px;
     font-weight: bolder;
     font-size: 16px;
+    cursor: pointer;
 }
 .headerTwo > div ul li:nth-child(1) {
     color: #FFB703;

@@ -4,8 +4,9 @@
     background: #E8EAEE;
     padding: 10px;
     padding-top: 60px;
-    min-height: 1250px;
+    min-height: 1150px;
     font-size: 19px;
+    position: relative;
 }
 .caption {
     text-align: center;
@@ -16,7 +17,7 @@
 }
 .grid {
     width: 85%;
-    height: 80%;
+    height: auto;
     transform: translate(-50%);
     left: 50%;
     margin-top: 60px;
