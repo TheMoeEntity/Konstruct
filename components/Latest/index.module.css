@@ -199,19 +199,13 @@
     }
 }
 @media screen and (max-width:744px) {
-    .grid {
-        width: 55%;
-    }
-    .grid > div {
-        flex:100%;
-    }
+
 }
-@media screen and (max-width:622px) {
+@media screen and (max-width:673px) {
     .grid {
-        width: 70%;
+        justify-content: center;
     }
     .grid > div {
-        width: 325px;
-        height: 350px;
+        margin-left: 0;
     }
 }

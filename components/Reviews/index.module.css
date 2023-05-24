@@ -1,8 +1,9 @@
 .reviews {
   background-color: #e8eaee;
-  height: 900px;
+  height: auto;
   width: 100%;
   padding-top: 150px;
+  padding-bottom: 120px;
 }
 .reviews h2 {
   font-size: 35px;
@@ -52,14 +53,14 @@
   justify-content: space-between;
   flex-flow: row wrap;
 }
-.slide2 strong{
-    display: block;
-    margin: 13px 5px;
-    font-size: 18.5px;
+.slide2 strong {
+  display: block;
+  margin: 13px 5px;
+  font-size: 18.5px;
 }
 .slide2 p {
-    margin-left: 8px;
-    font-size: 17px;
+  margin-left: 8px;
+  font-size: 17px;
 }
 .carousel > div:nth-child(1) {
   width: 60%;
@@ -146,4 +147,93 @@
   display: block;
   margin-bottom: 15px;
   font-size: 17.5px;
+}
+@media screen and (max-width: 995px) {
+  .reviews {
+    /* height: 1400px; */
+  }
+  .grid {
+    display: block;
+    width: 80%;
+    height: fit-content;
+  }
+  .grid > div {
+    width: 85%;
+    margin: 100px auto;
+    position: relative;
+  }
+  .slide {
+    height: 480px;
+  }
+  .slide2 {
+    height: 500px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .slide {
+    height: 500px;
+  }
+  .grid {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 651px) {
+  .slide2 {
+    height: 450px;
+  }
+  .grid {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 520px) {
+  .slide2 {
+    height: 490px;
+    padding: 0;
+  }
+  .slide {
+    height: fit-content;
+    padding: 20px 0;
+  }
+  .slide > div p {
+    padding: 10px 30px;
+    line-height: 2;
+    font-size: 13.5px;
+  }
+  .reviews h2 {
+    font-size: 27px;
+    margin: 15px 10px;
+  }
+  .grid > div {
+    width: 93%;
+    margin: 100px auto;
+    position: relative;
+  }
+  .carousel > div:nth-child(2) > div {
+    position: relative;
+    border-radius: 9px;
+    min-width: 100%;
+    min-height: 180px;
+    overflow: hidden;
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width:420px) {
+  .slide2 {
+    height: 440px;
+    padding: 0;
+  }
+  .slide > div p {
+    padding: 20px 30px;
+    line-height: 1.82;
+    font-size: 14.5px;
+  }
+  .reviews h2 {
+    font-size: 27px;
+    margin: 15px 10px;
+  }
+  .slide {
+    height: fit-content;
+    padding-bottom: 60px;
+  }
+
 }

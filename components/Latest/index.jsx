@@ -72,7 +72,7 @@ const Latest = () => {
                 <span>
                   Blue Glass Building <br />
                   <span style={{ fontWeight: "lighter" }}> {x.category}</span>
-                </span>
+                </span> 
 
                 <div className={styles.icon}>
                   <div>
