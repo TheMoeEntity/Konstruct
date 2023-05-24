@@ -22,9 +22,9 @@ const About = () => {
             <i className="fa-solid fa-gear"></i> WHO WE ARE??
           </h4>
           <h2>
-            Construction solutions <br /> focused future ready
+            Construction solutions focused future ready
           </h2>
-          <p>
+          <p> 
             Leverage agile frameworks to provide a robust synopsis for high
             level overviews. Iterative approaches to corporate strategy data
             foster to collaborative thinking to empowerment.

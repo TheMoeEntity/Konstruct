@@ -27,7 +27,7 @@ const Benefits = () => {
     e.target.children[0].style.color =
       height === "" || height === "0px" ? "black" : "#ffb703";
     e.target.nextSibling.nextSibling.style.padding =
-      height === "" || height === "0px" ? "20px 40px" : "0 40px";
+      height === "" || height === "0px" ? "5px 40px" : "0 40px";
     e.target.nextSibling.style.background =
       height === "" || height === "0px" ? "#F1F1F1" : "transparent";
     e.target.nextSibling.nextSibling.style.maxHeight =

@@ -22,7 +22,7 @@ const Numbers = () => {
             <span>0+</span>
             <span>Happy Clients</span>
           </div>
-          <div>
+          <div> 
             <span>0+</span>
             <span>Qualifed Engineers</span>
           </div>

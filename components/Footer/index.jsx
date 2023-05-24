@@ -39,7 +39,7 @@ const Footer = () => {
           <div>
             <div>
               <Image
-                src={icon3}
+                src={icon1}
                 objectFit="cover"
                 alt="card-image"
                 layout="fill"
@@ -54,7 +54,7 @@ const Footer = () => {
           <div>
             <div>
               <Image
-                src={icon1}
+                src={icon2}
                 objectFit="cover"
                 alt="card-image"
                 layout="fill"
@@ -66,9 +66,9 @@ const Footer = () => {
             <div>(+234) 807 548 9362,  (+880) 155 69569 366</div>
           </div>
           <div>
-            <div>
+            <div style={{width:'50px'}}>
               <Image
-                src={icon2}
+                src={icon3}
                 objectFit="cover"
                 alt="card-image"
                 layout="fill"

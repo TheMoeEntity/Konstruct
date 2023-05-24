@@ -1,10 +1,55 @@
 import styles from "./index.module.css";
 import logo from '../../public/images/logo-dark.png'
 import Image from "next/image";
+import { useRef, useState } from "react";
 
 const Header = () => {
+  const [sidebar,setSideBar] = useState(false)
+  const [content,setContent] = useState(false)
+  const sideContent = useRef(null)
+
+  const show = () => {
+    setSideBar(true)
+    setTimeout(() => {
+      sideContent.current.style.width = '70%'
+      sideContent.current.style.visibility = 'visible'
+    }, 700);
+  }
+
+  const hide = () => {
+    setSideBar(false)
+    setTimeout(() => {
+      sideContent.current.style.width = '0%'
+      sideContent.current.style.visibility = 'hidden'
+    }, 400);
+  }
+
   return (
     <div className={styles.header}>
+      <div style={{right:sidebar ? '0%':'-100%'}} className={styles.sidebar}>
+        <div ref={sideContent} className={styles.sidecontent}>
+          <div onClick={hide} className={styles.close}>
+            &times;
+          </div>
+          <ul>
+            <li>
+              <span>Home</span>
+              <span><i className="fa fa-plus"></i></span>
+            </li>
+            <li>About</li>
+            <li>
+              <span>Services</span>
+              <span><i className="fa fa-plus"></i></span>
+            </li>
+            <li>
+              <span>Pages</span>
+              <span><i className="fa fa-plus"></i></span>
+            </li>
+            <li>Blog</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+      </div>
       <div className={styles.headerOne}>
         <div>
           <div>
@@ -46,7 +91,7 @@ const Header = () => {
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
             </div>
-            <div>
+            <div className={styles.links}>
                 <ul>
                     <li>Home +</li>
                     <li>About +</li>
@@ -56,13 +101,16 @@ const Header = () => {
                     <li>Contact </li>
                 </ul>
             </div>
-            <div>
+            <div className={styles.search}>
                 <div>
                 <i class="fa-solid fa-magnifying-glass"></i>
                 </div>
                 <div>
                     {`LETS`} TALK
                 </div>
+            </div>
+            <div onClick={show} className={styles.bars}>
+              <i className="fa-solid fa-bars"></i>
             </div>
       </div>
     </div>

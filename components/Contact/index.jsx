@@ -9,7 +9,7 @@ const Contact = () => {
     <div className={styles.contact}>
       <div className={styles.grid}>
         <div>
-          <span>LET'S TALK</span>
+          <span>{`LET'S`} TALK</span>
           <h2>Got an upcoming project?</h2>
           <form action="">
             <div className={styles.formgroup}>
