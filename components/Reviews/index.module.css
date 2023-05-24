@@ -219,7 +219,7 @@
 }
 @media screen and (max-width:420px) {
   .slide2 {
-    height: 440px;
+    height: 400px;
     padding: 0;
   }
   .slide > div p {
