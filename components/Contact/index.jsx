@@ -76,7 +76,7 @@ const Contact = () => {
             <div className={styles.icons}>
               <Image
                 src={icon3}
-                objectFit="cover"
+                objectFit="cover" 
                 alt="card-image"
                 layout="fill"
                 quality={100}

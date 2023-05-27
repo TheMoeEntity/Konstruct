@@ -189,7 +189,7 @@ const Reviews = () => {
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                   </div>
-                  <div data-name='Norbert Odiaka,Civil engineering' data-src="tm4.jpeg">
+                  <div data-name='Norbert Odiaka,Civil eng.' data-src="tm4.jpeg">
                     <Image
                       src={test5}
                       objectFit="cover"
@@ -200,7 +200,7 @@ const Reviews = () => {
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                   </div>
-                  <div data-name='Obinna Adefihinti,Lead construction worker' data-src="tm5.jpeg">
+                  <div data-name='Obinna Adefihinti,Lead konst worker' data-src="tm5.jpeg">
                     <Image
                       src={test6}
                       objectFit="cover"
@@ -224,7 +224,7 @@ const Reviews = () => {
                   </div>
                 </div>
               </div>
-              <div ref={caption}>
+              <div className={styles.capt} ref={caption}>
                 <strong>Victor Nwigberi</strong>
                 <p>Construction worker</p>
               </div>

@@ -217,23 +217,21 @@
     margin-top: 20px;
   }
 }
-@media screen and (max-width:420px) {
+@media screen and (max-width:454px) {
+  .carousel > div:nth-child(2) {
+    display: none;
+  }
   .slide2 {
-    height: 400px;
-    padding: 0;
+    height: 500px;
   }
-  .slide > div p {
-    padding: 20px 30px;
-    line-height: 1.82;
-    font-size: 14.5px;
+  
+  .carousel > div:nth-child(1) {
+    width: 100%;
   }
-  .reviews h2 {
-    font-size: 27px;
-    margin: 15px 10px;
+  .carousel {
+    padding: 30px;
   }
-  .slide {
-    height: fit-content;
-    padding-bottom: 60px;
+  .capt {
+    padding: 5px 12px;
   }
-
 }
