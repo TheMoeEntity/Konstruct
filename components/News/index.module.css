@@ -17,7 +17,7 @@
     margin-top: 20px;
     width: 70%;
     line-height: 1.35;
-    margin-left: auto;
+    margin-left: auto; 
     margin-right: auto;
 }
 .grid {
@@ -105,4 +105,37 @@
     font-size:18px;
     margin-top: 40px;
     padding: 18px 25px;
+}
+@media screen and (max-width:1200px) {
+    .grid {
+        justify-content: space-around;
+    }
+    .grid > div {
+        margin: 30px 0;
+    }
+}
+@media screen and (max-width:900px)  {
+    .grid > div {
+        margin: 30px 0;
+    }
+}
+@media screen and (max-width:600px) {
+    .title h2 {
+        font-size: 25px;
+    }
+    .grid > div {
+        margin: 30px 0;
+    }
+}
+@media screen and (max-width:420px) {
+    .upcoming {
+        height: 550px;
+    }
+    .upcoming .title {
+        padding: 20px 10px;
+    }
+    .upcoming .title p {
+        width: 90%;
+    }
+    
 }

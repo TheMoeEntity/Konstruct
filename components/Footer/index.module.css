@@ -1,11 +1,12 @@
 .footer {
   width: 100%;
-  height: 552px;
+  height: auto;
   background-image: url("/images/footer-bg.jpeg");
   background-size: cover;
   background-position: center;
   padding: 40px 60px;
   color: white;
+  position: relative;
 }
 .grid {
   width: 100%;
@@ -24,7 +25,6 @@
 .grid > div:nth-child(2) > div {
   display: flex;
   margin: 50px 10px;
-  justify-content: space-between;
   font-size: 14px;
 }
 .grid > div:nth-child(2) {
@@ -128,3 +128,67 @@
     color:#ffb703;
     font-size: 8px;
 }
+@media screen and (max-width:400px) {
+  .footer {
+    padding: 40px 15px !important;
+  }
+  .grid > div:nth-child(2) > div > div:nth-child(1) {
+    height: 50px !important;
+    width: 50px !important;
+    transform: scale(0.85);
+  }
+
+}
+@media screen and (max-width:560px) {
+  .footer {
+    padding: 40px 30px !important;
+  }
+  .copyright {
+    padding: 20px 40px !important;
+  }
+  .copyright  ul li {
+    margin: 5px 10px;
+  }
+}
+@media screen and (max-width:920px) {
+    .grid {
+      flex-flow: column wrap;
+    }
+    .grid > div {
+      margin: 30px 0;
+    }
+    .grid > div:last-child {
+      margin-bottom: 120px;
+    }
+    .footer {
+      padding: 40px 80px;
+    }
+    .icons {
+      width: fit-content;
+    }
+    .icons i {
+      margin: 0 10px;
+    }
+    .grid > div:nth-child(2) > div > div:nth-child(1) {
+      height: 45px;
+      width: 45px;
+      transform: scale(0.85);
+    }
+    .copyright {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        flex-flow: row wrap;
+        justify-content: center;
+        height: auto;
+        padding: 20px 0;
+        font-size: 14px;
+        text-align: center;
+    }
+    .copyright > div:nth-child(1 ) {
+      order: 2;
+      margin-top: 20px;
+      font-weight: bold;
+
+    }
+ }

@@ -12,7 +12,7 @@ const News = () => {
       </div>
       <div className={styles.grid}>
         <div>
-          <div className={styles.img}>
+          <div className={styles.img}> 
             <Image
               src={worker}
               objectFit="cover"
