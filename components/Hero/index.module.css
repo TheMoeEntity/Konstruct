@@ -2,7 +2,7 @@
     width: 100%;
     height: auto;
     position: relative;
-    padding-bottom: 150px;
+    padding-bottom: 0px;
 }
 .blob > div {
     position: relative;
@@ -47,7 +47,16 @@
 }
 @media screen and (max-width:540px) {
     .caption {
-        width:80%;
+        width:85%;
+        margin-top: 60px;
+    }
+    .sect {
+        height: 500px !important;
+        background-position: bottom;
+    }
+    .caption:nth-child(2) {
+        margin-right: 10px !important;
+        float: left !important;
     }
 }
 @media screen and (max-width:510px) {
