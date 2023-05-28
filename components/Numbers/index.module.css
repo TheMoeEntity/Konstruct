@@ -2,6 +2,7 @@
     width: 100%;
     background-image: url('/images/counter-bg.jpeg');
     background-size: cover;
+    background-repeat: no-repeat;
     height: 600px;
     display: flex;
     flex-flow: row wrap;
@@ -87,6 +88,7 @@
     }
     .numbers {
         height: 1600px;
+        background-position: bottom;
     }
     .grid > div:nth-child(2) > div  {
         flex:100%;
