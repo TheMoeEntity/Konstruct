@@ -14,13 +14,16 @@
 .caption h2 {
     font-size: 35px;
     margin-top: 25px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
 }
 .grid {
     width: 85%;
     height: auto;
     transform: translate(-50%);
     left: 50%;
-    margin-top: 60px;
+    margin-top: 20px;
     position: absolute;
     display: flex;
     flex-flow: row wrap;
@@ -195,6 +198,11 @@
     }
     .products {
         min-height: 3100px !important;
+    }
+    .caption h2 {
+        font-size: 26px;
+        margin-top: 15px;
+        width: 100%;
     }
 }
 @media screen and (max-width:380px) {

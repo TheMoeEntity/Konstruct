@@ -39,7 +39,7 @@ const Products = () => {
       <div className={styles.caption}>
         <b>WHAT WE DO</b>
         <h2>
-          Develop comprehensive solutions <br /> for each project
+          Develop comprehensive solutions for each project
         </h2>
       </div>
       <div className={styles.grid}>
