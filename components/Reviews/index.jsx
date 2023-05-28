@@ -96,7 +96,8 @@ const Reviews = () => {
                 </div>
                 <div className={styles.capt}>
                   <strong>MOSES C. NWIGBERI</strong>
-                  CEO, Brick Consulting
+                <div>CEO, Brick Consulting</div>
+                  
                 </div>
               </div>
               <div className="keen-slider__slide number-slide2">
