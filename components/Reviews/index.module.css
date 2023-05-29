@@ -25,6 +25,7 @@
 .grid > div {
   width: 48%;
   height: 100%;
+  max-width: 600px;
   position: relative;
 }
 .slide {
@@ -142,11 +143,16 @@
 }
 .capt {
   padding: 20px 40px;
+  transition: all 1s;
+}
+.capt div {
+  transition: all 1s;
 }
 .capt strong {
   display: block;
   margin-bottom: 15px;
   font-size: 17.5px;
+  transition: all 1s;
 }
 @media screen and (max-width: 995px) {
   .reviews {
@@ -223,6 +229,11 @@
   }
   .capt div {
     padding-left: 10px;
+  }
+}
+@media screen and (min-width:1500px) {
+  .grid {
+    justify-content: space-around;
   }
 }
 @media screen and (max-width:454px) {
