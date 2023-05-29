@@ -23,11 +23,10 @@ const Reviews = () => {
   useEffect(() => {
     const currentImage = slide2.current.children[index].getAttribute("data-src");
     const currentName =   slide2.current.children[index].getAttribute("data-name");
-    console.log(currentName.split(",")[0])
     main.current.style.backgroundImage = `url('/images/${currentImage}')`;
     caption.current.children[0].textContent = currentName.split(",")[0]
     caption.current.children[1].textContent = currentName.split(",")[1]
-    console.log(index);
+  
   }, [index]);
 
   const nextPrev = (type) => {
@@ -42,22 +41,32 @@ const Reviews = () => {
   const scrollAction = (type) => {
     const sliderr = slide2.current;
     const height = sliderr.children[0].clientHeight;
+    const elem = sliderr.children[index === 4 ? 1:index+1]
+    const prev = sliderr.children[index-1]
     if (type === "down") {
       if (index === 4) {
-        sliderr.scrollTop -= (height + 20) * 5;
+        // sliderr.scrollTop -= (height + 20) * 5;
+        sliderr.scrollTo(0,-((height + 20) * 5))
         setIndex(0);
         return;
       }
-      sliderr.scrollTop += height + 20;
+      // sliderr.scrollTop += height + 20;
+      // sliderr.scrollTo(0,height+20)
+      elem.scrollIntoView({block:"nearest", inline:'start', behavior:"smooth"})
+      console.log("scroll")
       setIndex((x) => x + 1);
     } else if (type == "up") {
       if (index === 0) {
-        sliderr.scrollTop += (height + 20) * 5;
+        // sliderr.scrollTop += (height + 20) * 5;
+        sliderr.scrollTo(0,(height + 20) * 5)
         setIndex(4);
         return;
       }
-      sliderr.scrollTop -= height + 20;
+      // sliderr.scrollTop -= height + 20;
+      prev.scrollIntoView({block:"nearest", inline:'start', behavior:"smooth"})
+      console.log("scroll")
       setIndex((x) => x - 1);
+      
     }
   };
 
