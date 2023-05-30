@@ -167,7 +167,7 @@ const Hero = () => {
                       scale: 1,
                       opacity: 1,
                       transition: {
-                        delay: 0.4,
+                        delay: 0.6,
                         duration: 0.8,
                         type:'spring',
                         bounce:0.8
