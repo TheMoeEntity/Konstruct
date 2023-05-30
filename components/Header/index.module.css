@@ -60,6 +60,72 @@
     align-items: center;
     transition: 0.7s;
 }
+.links > ul > li {
+    position: relative;
+    height: 110px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding-top: 45px;
+}
+.links > ul > li:hover .dropdn {
+    max-height: fit-content;
+    padding: 15px 0px;
+    overflow: visible;
+}
+.multiple:hover .mores {
+    padding: 15px 0px;
+    max-height: fit-content;
+}
+.dropdn {
+    position: absolute;
+    top: 110px;
+    padding: 0px 20px;
+    max-height: 0;
+    padding: 0;
+    font-weight: 400;
+    transition:all 0.48s;
+    overflow: hidden;
+    width: 250px;
+    height: auto;
+    color: black;
+    background-color: white;
+    box-shadow: 5px 9px 15px 0 rgba(143, 143, 143, 0.2), 2.5px -9px 35px 0 rgba(143, 143, 143, 0.2);
+    z-index: 99;
+}
+.mores {
+    position: absolute;
+    top: 10px;
+    left: 250px;
+    padding: 15px 0px;
+    max-height: 0;
+    padding: 0;
+    font-weight: 400;
+    transition:all 0.48s;
+    overflow: hidden;
+    width: 250px;
+    height: auto;
+    background-color: white;
+    box-shadow: 5px 9px 15px 0 rgba(143, 143, 143, 0.2), 2.5px -9px 35px 0 rgba(143, 143, 143, 0.2);
+    z-index: 99;
+}
+.links > ul > li > div ul li {
+    width: 100% !important;
+    height: 30px;
+    list-style-type: none;
+    margin: 20px 0;
+    padding: 0 40px;
+    position: relative;
+}
+.dropdn > ul > li:hover {
+    color: #FFB703;
+}
+.dropdn > ul > li:hover .mores {
+    color: black;
+}
+.mores ul li:hover {
+    color: #FFB703;
+}
 .sidecontent > ul li > ul {
     width: 100%;
     min-height: fit-content;
@@ -164,14 +230,14 @@
     width: 235.8px;
     height: 44.0px;
 }
-.headerTwo > div ul li {
+.headerTwo > div > ul > li {
     display: inline-block;
     margin: 0 15px;
-    font-weight: bolder;
+    font-weight: 500;
     font-size: 16px;
     cursor: pointer;
 }
-.headerTwo > div ul li:nth-child(1) {
+.headerTwo > div> ul> li:nth-child(1) {
     color: #FFB703;
 }
 .headerTwo > div > div {

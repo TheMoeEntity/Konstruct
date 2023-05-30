@@ -135,10 +135,80 @@ const Header = () => {
         </div>
         <div className={styles.links}>
           <ul>
-            <li>Home +</li>
-            <li>About +</li>
-            <li>Services +</li>
-            <li>Pages +</li>
+            <li>
+              Home +
+              <div className={styles.dropdn}>
+                <ul>
+                  <li className={styles.multiple}>
+                    Single Pages +
+                    <div className={styles.mores}>
+                      <ul>
+                        <li>Singin Out Loud</li>
+                        <li>Nothing can stop me</li>
+                        <li>Service Single 3</li>
+                        <li>Lorem Ipsum</li>
+                        <li>Dolor SIt </li>
+                        <li>Moses Pages</li>
+                        <li>Sex Playlist</li>
+                        <li>Bunch of words</li>
+                        <li>Sia is the greatest</li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li className={styles.multiple}>
+                    Multiple Pages +
+                    <div className={styles.mores}>
+                      <ul>
+                        <li>Services Style 1</li>
+                        <li>Services Style 2</li>
+                        <li>Service Single 3</li>
+                        <li>Lorem Ipsum</li>
+                        <li>Dolor SIt </li>
+                        <li>Moses Pages</li>
+                        <li>Sex Playlist</li>
+                        <li>Bunch of words</li>
+                        <li>Sia is the greatest</li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>About</li>
+            <li>
+              Services +
+              <div className={styles.dropdn}>
+                <ul>
+                  <li>Services Style 1</li>
+                  <li>Services Style 2</li>
+                  <li>Service Single</li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              Pages +
+              <div className={styles.dropdn}>
+                <ul>
+                  <li className={styles.multiple}>
+                    Team
+                    <div className={styles.mores}>
+                      <ul>
+                        <li>Team Style 1</li>
+                        <li>Team Style 2</li>
+                        <li>Team Style 3</li>
+                        <li>Team Style 4</li>
+                        <li>Team Style 5 </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>Projects</li>
+                  <li>Pricing Plan</li>
+                  <li>Faq</li>
+                  <li>Gallery</li>
+                  <li>Shop</li>
+                </ul>
+              </div>
+            </li>
             <li>Blog </li>
             <li>Contact </li>
           </ul>

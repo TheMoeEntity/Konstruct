@@ -4,14 +4,14 @@ import icon2 from "../../public/images/icons1.png";
 import Image from "next/image";
 import "react-slideshow-image/dist/styles.css";
 import { Slide } from "react-slideshow-image";
-
+import { motion } from "framer-motion";
 
 const Hero = () => {
   const spanStyle = {
     padding: "20px",
     background: "#efefef",
     color: "#000000",
-    visibility:'hidden',
+    visibility: "hidden",
   };
 
   const divStyle = {
@@ -102,75 +102,97 @@ const Hero = () => {
           />
         </div>
       </div>
-      {/* <div className={styles.caption}>
-        <h1>
-          We build something <br /> new and consistent.
-        </h1>
-        <p>
-          No matter where or what you want to build, we mobilize the right
-          experts to drive value and realize your project consistent goals.
-        </p>
-
-        <button>
-            DISCOVER MORE
-        </button>
-      </div> <br /> <br /> <br /> */}
-
-      {/* <div className={styles.caption}>
-        <h1>
-          We build stong <br />  and durable things.
-        </h1>
-        <p>
-          No matter where or what you want to build, we mobilize the right
-          experts to drive value and realize your project consistent goals.
-        </p>
-
-        <button>
-            DISCOVER MORE
-        </button>
-      </div> */}
       <div className="slide-container">
-        <Slide arrows={false} infinite={true} duration={`7000`} transitionDuration={`400`}>
+        <Slide
+          arrows={false}
+          infinite={true}
+          duration={`7000`}
+          transitionDuration={`400`}
+        >
           {slideImages.map((slideImage, index) => (
             <div key={index}>
               <div
-              className={styles.sect}
+                className={styles.sect}
                 style={{
                   ...divStyle,
                   backgroundImage: `url(${slideImage.url})`,
                 }}
               >
                 <span style={spanStyle}>{slideImage.caption}</span>
-                {
-                  index === 1 ? (
-                    <div style={{float:'right', marginRight:'70px',}} className={styles.caption}>
-                    <h1>
-                      We build stong <br /> and durable things.
-                    </h1>
-                    <p>
-                      No matter where or what you want to build, we mobilize the
-                      right experts to drive value and realize your project
-                      consistent goals.
-                    </p>
-  
-                    <button>DISCOVER MORE</button>
-                  </div>
-                  ):(
-                    <div className={styles.caption}>
-                    <h1>
-                      We build stong <br /> and durable things.
-                    </h1>
-                    <p>
-                      No matter where or what you want to build, we mobilize the
-                      right experts to drive value and realize your project
-                      consistent goals.
-                    </p>
-  
-                    <button>DISCOVER MORE</button>
-                  </div>
-                  )
-                }
+                {index === 1 ? (
+                
+                    <motion.div
+                    initial="hidden"
+                    animate="visible"
+                    variants={{
+                      hidden: {
+                        scale: 0,
+                        opacity: 0,
+                      },
+                      visible: {
+                        scale: 1,
+                        opacity: 1,
+                        transition: {
+                          delay: 0.8,
+                          duration: 0.8,
+                        },
+                      },
+                    }}
+                      style={{ float: "right", marginRight: "70px" }}
+                      className={styles.caption}
+                    >
+                      <h1>
+                        We build strong <br /> and durable things.
+                      </h1>
+                      <p>
+                        No matter where or what you want to build, we mobilize
+                        the right experts to drive value and realize your
+                        project consistent goals.
+                      </p>
 
+                      <button>DISCOVER MORE</button>
+                    </motion.div>
+                  
+                ) : (
+                  <motion.div
+                  initial="hidden"
+                  animate="visible"
+                  variants={{
+                    hidden: {
+                      scale: 0,
+                      opacity: 0,
+                      x:0
+                    },
+                    visible: {
+                      scale: 1,
+                      opacity: 1,
+                      transition: {
+                        delay: 0.4,
+                        duration: 0.8,
+                        type:'spring',
+                        bounce:0.8
+                      },
+                      // transitionEnd: {
+                      //   x:"5px",
+                      //   delay:0.2,
+                      //   duration: 1.4,
+                        
+                      // }
+                    },
+                  }}
+                  className={styles.caption}>
+                    <h1>
+                      We build stong <br /> and durable things.
+                    </h1>
+                    <p>
+                      No matter where or what you want to build, we mobilize the
+                      right experts to drive value and realize your project
+                      consistent goals.
+                    </p>
+
+                    <button>DISCOVER MORE</button>
+                  </motion.div>
+                )}
               </div>
             </div>
           ))}
