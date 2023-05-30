@@ -1,40 +1,40 @@
-import worker from "../../public/images/servic-1.jpeg";
-import worker2 from "../../public/images/servic-2.jpeg";
-import worker3 from "../../public/images/servic-3.jpeg";
-import worker4 from "../../public/images/servic-4.jpeg";
-import worker5 from "../../public/images/servic-5.jpeg";
-import worker6 from "../../public/images/servic-6.jpeg";
+import worker from "../../public/images/one.jpeg";
+import worker2 from "../../public/images/two.jpeg";
+import worker3 from "../../public/images/three.jpeg";
+import worker4 from "../../public/images/four.jpeg";
+import worker5 from "../../public/images/five.jpeg";
+import worker6 from "../../public/images/six.jpeg";
 
 const data = [
   {
     img: worker,
     title: "General Construction",
-    category: "architecture",
+    category: "house renovation",
   },
   {
     img: worker2,
     title: "Proper Maintenance",
-    category: "interiors",
+    category: "house & exterior",
   },
   {
     img: worker3,
     title: "Project Management",
-    category: "architecture",
+    category: "house renovation",
   },
   {
     img: worker4,
     title: "Virtual design & build",
-    category: "house renovation",
+    category: "house & exterior",
   },
   {
     img: worker5,
     title: "Preconstruction",
-    category: "house renovation",
+    category: "interiors",
   },
   {
     img: worker6,
     title: "Design build",
-    category: "house & exterior",
+    category: "interiors",
   },
 ];
 export default data;

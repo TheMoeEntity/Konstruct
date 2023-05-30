@@ -27,7 +27,7 @@
     /* position: absolute; */
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     
 }
 
@@ -35,11 +35,11 @@
     width: 350px;
     height: 340px;
     margin-top: 40px;
-    margin-left: 12px;
+    margin-left: 20px;
     position: relative;
     cursor: pointer;
     overflow: hidden;
-    transition: 0.4s ease-in;
+    transition: 0.6s ease-in;
 }
 
 .grid > div:hover  {

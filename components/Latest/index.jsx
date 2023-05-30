@@ -3,11 +3,12 @@ import Image from "next/image";
 import icon from "../../public/images/service-icon1.png";
 import { AnimatePresence, motion } from "framer-motion";
 import data from "./data";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 const Latest = () => {
   const [displayData, setDisplayData] = useState(data);
   const [active, setActive] = useState("ALL");
+  const title = useRef(null);
   const filter = [
     "ALL",
     "ARCHITECTURE",
@@ -16,7 +17,17 @@ const Latest = () => {
     "HOUSE RENOVATION",
   ];
 
-  const handleFilter = (category) => {
+  const handleFilter = (category, current) => {
+    current = current.toLocaleLowerCase();
+    let children = title.current.children;
+    for (const child of children) {
+      child.style.background = "white";
+      if (
+        child.textContent.toLocaleLowerCase() === current.toLocaleLowerCase()
+      ) {
+        child.style.background = "#FFB703";
+      }
+    }
     if (category === active) return;
     setActive(category);
     setDisplayData([]);
@@ -25,10 +36,19 @@ const Latest = () => {
       setDisplayData(data);
       return;
     }
+    if (category === 'architecture') {
+      setTimeout(() => {
+        setDisplayData(()=> {
+          let array = [data[0],data[1]]
+          console.log(array,"h")
+          return array
+        });
+      }, 300);
 
-    const filteredData = data.filter(
-      (item) => item.category === category
-    );
+      return
+    }
+
+    const filteredData = data.filter((item) => item.category === category);
 
     setTimeout(() => {
       setDisplayData(filteredData);
@@ -40,9 +60,9 @@ const Latest = () => {
         <b>PROJECTS</b>
         <h2>Latest completed projects</h2>
 
-        <div className={styles.tile}>
+        <div ref={title} className={styles.tile}>
           {filter.map((x, i) => (
-            <div onClick={() => handleFilter(x.toLocaleLowerCase())} key={i}>
+            <div onClick={() => handleFilter(x.toLocaleLowerCase(), x)} key={i}>
               {x}
             </div>
           ))}
@@ -72,7 +92,7 @@ const Latest = () => {
                 <span>
                   Blue Glass Building <br />
                   <span style={{ fontWeight: "lighter" }}> {x.category}</span>
-                </span> 
+                </span>
 
                 <div className={styles.icon}>
                   <div>
@@ -82,7 +102,7 @@ const Latest = () => {
                       alt="card-image"
                       layout="fill"
                       quality={100}
-                      priority={true} 
+                      priority={true}
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                   </div>
