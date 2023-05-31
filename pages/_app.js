@@ -15,7 +15,7 @@ export default function App({ Component, pageProps }) {
     exit="exitState"
     className='main'
     transition={{
-      duration: 1
+      duration: 1.3
     }}
     variants={{
       initialState: {

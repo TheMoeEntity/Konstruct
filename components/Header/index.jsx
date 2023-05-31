@@ -2,6 +2,7 @@ import styles from "./index.module.css";
 import logo from "../../public/images/logo-dark.png";
 import Image from "next/image";
 import { useRef, useState } from "react";
+import Link from "next/link";
 
 const Header = () => {
   const [sidebar, setSideBar] = useState(false);
@@ -123,15 +124,17 @@ const Header = () => {
       </div>
       <div className={styles.headerTwo}>
         <div>
-          <Image
-            src={logo}
-            objectFit="cover"
-            alt="card-image"
-            layout="fill"
-            quality={100}
-            priority={true}
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          />
+          <Link href={`/`}>
+            <Image
+              src={logo}
+              objectFit="cover"
+              alt="card-image"
+              layout="fill"
+              quality={100}
+              priority={true}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
+          </Link>
         </div>
         <div className={styles.links}>
           <ul>
