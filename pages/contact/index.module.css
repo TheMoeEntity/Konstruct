@@ -1,0 +1,69 @@
+.contact {
+    width: 100%;
+    height: auto;
+}
+.hero{
+    width: 100%;
+    height: 500px;
+    background-image: url('/images/inr-6.jpeg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.caption {
+    width: 80%;
+    height: 85%;
+    max-width: 550px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    color: white;
+    text-align: center;
+    line-height: 2.0;
+    margin-top: 30px;
+}
+.copyrights {
+    background: rgba(255, 255, 255, 0.1);;
+    width: fit-content;
+    padding: 0 50px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px !important;
+}
+.copyrights > div {
+    margin-left: 12px;
+}
+.copyrights > div:first-child {
+    color: #ffb703;
+}
+.copyrights i {
+    font-size: 9px;
+    color: #ffb703;
+    display: block;
+}
+.caption h2 {
+    margin: 0;
+}
+.caption > div {
+    margin: 8px 0;
+}
+.line {
+    width: 65px;
+    height: 5px;
+    background-color: #ffb703;
+}
+@media screen and (max-width:600px) {
+    .hero {
+        height: 420px;
+        background-position: left;
+    }
+}
+@media screen and (min-width:601px) {
+        .hero h2 {
+            font-size: 30px;
+        }
+}

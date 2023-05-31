@@ -5,6 +5,7 @@ import Image from "next/image";
 import "react-slideshow-image/dist/styles.css";
 import { Slide } from "react-slideshow-image";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const Hero = () => {
   const spanStyle = {
@@ -150,7 +151,7 @@ const Hero = () => {
                         project consistent goals.
                       </p>
 
-                      <button>DISCOVER MORE</button>
+                      <Link href={'/contact'}><button>DISCOVER MORE</button></Link>
                     </motion.div>
                   
                 ) : (
@@ -190,7 +191,7 @@ const Hero = () => {
                       consistent goals.
                     </p>
 
-                    <button>DISCOVER MORE</button>
+                    <Link href={'/contact'}><button>DISCOVER MORE</button></Link>
                   </motion.div>
                 )}
               </div>
