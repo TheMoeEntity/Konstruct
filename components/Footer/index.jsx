@@ -4,6 +4,7 @@ import Image from "next/image";
 import icon1 from "../../public/images/1.png";
 import icon2 from "../../public/images/2.png";
 import icon3 from "../../public/images/3.png";
+import Link from 'next/link'
 
 const Footer = () => {
   return (
@@ -126,7 +127,7 @@ const Footer = () => {
                 <li>Services <i className="fas fa-circle"></i></li>
                 <li>Pages <i className="fas fa-circle"></i></li>
                 <li>Blog <i className="fas fa-circle"></i></li>
-                <li>Contact</li>
+                <li><Link href="/contact">Contact</Link></li>
             </ul>
         </div>
       </div>
