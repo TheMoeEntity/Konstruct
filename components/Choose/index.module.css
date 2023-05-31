@@ -113,12 +113,12 @@
 
 }
 .skill > div:nth-child(2) > div {
-    width: 95%;
+    width: 0%;
     background-color: #FFB703;
     height: 100%;
     border-radius: 3px;
     position: relative;
-    transition: 1.2s;
+    transition: 1.7s;
 }
 .skill > div:nth-child(2) > div > div {
     margin-top: -25px;

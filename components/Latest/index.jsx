@@ -40,7 +40,6 @@ const Latest = () => {
       setTimeout(() => {
         setDisplayData(()=> {
           let array = [data[0],data[1]]
-          console.log(array,"h")
           return array
         });
       }, 300);
