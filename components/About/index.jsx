@@ -2,6 +2,7 @@ import styles from "./index.module.css";
 import Image from "next/image";
 import man from "../../public/images/about.png";
 import abzt from "../../public/images/abzt.jpeg";
+import shape from "../../public/images/shape-1.png";
 const About = () => {
   return (
     <div className={styles.about}>
@@ -17,9 +18,22 @@ const About = () => {
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </div>
-        <div>
+        <div className={styles.stuff}>
+          <div className={styles.img}>
+            <div>
+              <Image
+                src={shape}
+                objectFit="cover"
+                alt="card-image"
+                layout="fill"
+                quality={100}
+                priority={true}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              />
+            </div>
+          </div>
           <h4>
-            <i className="fa-solid fa-gear"></i> WHO WE ARE??
+          &nbsp; &nbsp; &nbsp;WHO WE ARE??
           </h4>
           <h2>Construction solutions focused future ready</h2>
           <p>

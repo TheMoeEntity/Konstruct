@@ -21,6 +21,19 @@
     height: 100%;
     position: relative;
 }
+.stuff {
+    position: relative;
+}
+.img {
+    position: absolute;
+    left: 0px;
+    top: 2px;
+}
+.img > div {
+    position: relative;
+    width: 13px;
+    height: 13px;
+}
 .about > div > div:nth-child(1) {
     height: 500px;
 }
