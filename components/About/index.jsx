@@ -3,10 +3,86 @@ import Image from "next/image";
 import man from "../../public/images/about.png";
 import abzt from "../../public/images/abzt.jpeg";
 import shape from "../../public/images/shape-1.png";
+import one1 from "../../public/images/one1.png";
+import one2 from "../../public/images/one2.png";
+import one3 from "../../public/images/one3.png";
 const About = () => {
   return (
     <div className={styles.about}>
-      <div>
+      <div className={styles.cards}>
+        
+        <div>
+          <div style={{ width: "60px", height: "60px" }}>
+            <Image
+              src={one1}
+              objectFit="cover"
+              alt="card-image"
+              layout="fill"
+              quality={100}
+              priority={true}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
+          </div>
+          <div>
+            <strong>Sustainable Systems</strong>
+          </div>
+          <div>
+            <p>
+              Leverage agile frameworks to provide a robust synopsis for high
+              level overviews iterative approaches to corporate.
+            </p>
+          </div>
+        </div>
+
+
+         <div>
+          <div style={{ width: "60px", height: "60px" }}>
+            <Image
+              src={one2}
+              objectFit="cover"
+              alt="card-image"
+              layout="fill"
+              quality={100}
+              priority={true}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
+          </div>
+          <div>
+            <strong>Quality Services</strong>
+          </div>
+          <div>
+            <p>
+              Leverage agile frameworks to provide a robust synopsis for high
+              level overviews iterative approaches to corporate.
+            </p>
+          </div>
+        </div>
+
+
+        <div>
+          <div style={{ width: "60px", height: "60px" }}>
+            <Image
+              src={one3}
+              objectFit="cover"
+              alt="card-image"
+              layout="fill"
+              quality={100}
+              priority={true}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
+          </div>
+          <div>
+            <strong>Remodeling Experts</strong>
+          </div>
+          <div>
+            <p>
+              Leverage agile frameworks to provide a robust synopsis for high
+              level overviews iterative approaches to corporate.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className={styles.main}>
         <div>
           <Image
             src={man}
@@ -32,9 +108,7 @@ const About = () => {
               />
             </div>
           </div>
-          <h4>
-          &nbsp; &nbsp; &nbsp;WHO WE ARE??
-          </h4>
+          <h4>&nbsp; &nbsp; &nbsp;WHO WE ARE??</h4>
           <h2>Construction solutions focused future ready</h2>
           <p>
             Leverage agile frameworks to provide a robust synopsis for high

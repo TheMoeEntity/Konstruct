@@ -139,7 +139,7 @@ const Header = () => {
         <div className={styles.links}>
           <ul>
             <li>
-              Home +
+              <Link href={"/"}> Home + </Link>
               <div className={styles.dropdn}>
                 <ul>
                   <li className={styles.multiple}>
@@ -213,7 +213,9 @@ const Header = () => {
               </div>
             </li>
             <li>Blog </li>
-            <li>Contact </li>
+            <li>
+              <Link href={"/contact"}>Contact</Link>
+            </li>
           </ul>
         </div>
         <div className={styles.search}>
