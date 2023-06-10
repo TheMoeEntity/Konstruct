@@ -1,14 +1,31 @@
 import styles from "./index.module.css";
 import logo from "../../public/images/logo-dark.png";
 import Image from "next/image";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import Link from "next/link";
 
 const Header = () => {
   const [sidebar, setSideBar] = useState(false);
   const [content, setContent] = useState(false);
-  const sideContent = useRef(null);
+  const sideContent = useRef(null)
+  const [sticky,setSticky] = useState('')
 
+  useEffect(() => {
+    window.addEventListener('scroll',isSticky)
+  
+    return () => {
+      window.removeEventListener('scroll', isSticky)
+    }
+  }, [])
+  
+  const isSticky = ()=> {
+    const scrollTop = window.scrollY
+    const stickyClass = scrollTop >= 180 ? styles.isSticky : ''
+    setSticky(stickyClass)
+  }
+
+  const classes = `${styles.headerTwo} ${sticky}`
+  
   const show = () => {
     setSideBar(true);
     setTimeout(() => {
@@ -122,7 +139,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div className={styles.headerTwo}>
+      <div className={`${styles.headerTwo} ${sticky}`}>
         <div>
           <Link href={`/`}>
             <Image

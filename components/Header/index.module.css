@@ -3,6 +3,7 @@
     height: auto;
     color: whitesmoke;
     font-size: 14px;
+    position: relative;
 }
 .sidebar {
     width: 100%;
@@ -220,7 +221,43 @@
     padding: 0 60px;
     box-shadow: 5px 9px 15px 0 rgba(143, 143, 143, 0.2);
     z-index: 999999999;
+    top: 0;
+    position: sticky;
+    z-index: 111111;
+    transition: 0.5s;
+
     
+}
+.isSticky {
+    position: fixed;
+    top:0;
+    left: 0;
+    z-index: 111111;
+    animation: 500ms ease-in 0s normal none 1 running fadeInDown;
+    animation: bounce2 1.2s;
+}
+
+@keyframes bounce2 {
+  0% {
+    opacity: 0;
+  }
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+    opacity: 1;
+  }
+  60% {
+    transform: translateY(-15px);
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .headerTwo > div {
     position: relative;
