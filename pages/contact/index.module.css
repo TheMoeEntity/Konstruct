@@ -53,13 +53,188 @@
 }
 .line {
     width: 65px;
-    height: 5px;
+    height: 6px;
+    display: block;
     background-color: #ffb703;
+}
+.maps {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+.maps > div {
+    width: 33.333333%;
+    height: 550px;
+}
+
+.maps > div:last-child {
+    background-image: url('/images/servic-3.jpeg');
+    background-position: center;
+    background-size: cover;
+}
+.maps > div:nth-child(2) {
+    background-color: #010D14;
+    padding:30px 30px;
+}
+.maps > div:nth-child(2) form {
+    width: 100%;
+    height: 100%;
+}
+.formGroup {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin: 40px auto;
+}
+.formGroup input {
+    height: 50px;
+    width: 45%;
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    padding: 15px 0;
+    color: white;
+    outline: none;
+    border-bottom: 1px solid rgba(203, 203, 203, 0.3);
+}
+.formGroup:last-child {
+    margin-bottom: 0 !important;
+}
+.formGroup input::placeholder {
+    color: white;
+}
+.maps > div:nth-child(2) form h1 {
+    color: white;
+    font-size: 35px;
+    width: 100%;
+    margin-top: 40px;
+    text-align: center;
+    margin-bottom: 50px;
+    
+}
+.maps > div:nth-child(2) form textarea {
+    width: 100%;
+    height: 120px;
+    outline: none;
+    border: none;
+    margin-top: -20px;
+    padding: 20px 0px;
+    background-color: transparent;
+    color: white;
+    border-bottom: 1px solid rgba(203, 203, 203, 0.3);
+}
+.maps > div:nth-child(2) form textarea::placeholder {
+    color: white;
+}
+.btn {
+    background-color: #ffb703;
+    color: #010D14;
+    padding:15px 30px;
+    margin-top: 30px;
+    font-weight: bolder;
+    display: block;
+}
+.cards {
+    margin: 70px auto;
+    width: 85%;
+    height: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+}
+.cards > div {
+    height: 270px;
+    width: 32%;
+    background-color: #010D14;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    color: white;
+   
+}
+.cards > div > div {
+    margin: 20px 0;
+
+}
+.cards > div > div p {
+    font-size: 17px;
+    line-height: 1.5;
+    text-align: center;
+    color: lightgray;
+}
+.icons {
+    width: 60px;
+    height: 60px;
+    position: relative;
+}
+@media screen and (max-width:963px) {
+    .maps {
+        flex-flow: column wrap;
+    }
+    .maps > div {
+        width: 100%;
+        height: auto;
+    }
+    .maps > div:nth-child(2) {
+        padding: 70px 40px;
+    }
+    .maps > div:last-child {
+        display: none;
+    }
+    .formGroup  {
+        flex-flow: column wrap;
+        margin: 10px auto;
+    }
+    .formGroup input {
+        width: 100%;
+        height: 80px;
+    }
+    .maps > div:nth-child(2) form textarea {
+        margin-top: 15px;
+    }
+}
+@media screen and (max-width:820px) {
+    .cards {
+        width: 95%;
+    }
+}
+@media screen and (max-width:730px) {
+    .cards {
+        width: 80%;
+        flex-flow: column wrap;
+    }
+    .cards > div {
+        width: 100%;
+        margin: 20px 0;
+    }
 }
 @media screen and (max-width:600px) {
     .hero {
         height: 420px;
         background-position: left;
+    }
+}
+@media screen and (max-width:470px) {
+    .cards {
+        width: 95%;
+        flex-flow: column wrap;
+    }
+    .cards > div {
+        height: 240px;
+    }
+    .icons {
+        width: 45px;
+        height: 45px;
+    }
+    .cards h2 {
+        font-size: 16px;
     }
 }
 @media screen and (min-width:601px) {

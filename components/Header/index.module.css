@@ -69,6 +69,9 @@
     display: flex;
     padding-top: 45px;
 }
+.links > ul > li:hover {
+    color: #FFB703;
+}
 .links > ul > li:hover .dropdn {
     max-height: fit-content;
     padding: 15px 0px;
@@ -300,7 +303,7 @@
 }
 @media screen and (max-width:1051px) {
     .headerOne {
-        display: none;
+        display: none !important;
     }
 }
 @media screen and (max-width:1007px) {

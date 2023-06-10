@@ -7,25 +7,25 @@ import Link from "next/link";
 const Header = () => {
   const [sidebar, setSideBar] = useState(false);
   const [content, setContent] = useState(false);
-  const sideContent = useRef(null)
-  const [sticky,setSticky] = useState('')
-
+  const sideContent = useRef(null);
+  const [sticky, setSticky] = useState("");
+  const headerRef = useRef(null);
   useEffect(() => {
-    window.addEventListener('scroll',isSticky)
-  
-    return () => {
-      window.removeEventListener('scroll', isSticky)
-    }
-  }, [])
-  
-  const isSticky = ()=> {
-    const scrollTop = window.scrollY
-    const stickyClass = scrollTop >= 170 ? styles.isSticky : ''
-    setSticky(stickyClass)
-  }
+    window.addEventListener("scroll", isSticky);
 
-  const classes = `${styles.headerTwo} ${sticky}`
-  
+    return () => {
+      window.removeEventListener("scroll", isSticky);
+    };
+  }, []);
+
+  const isSticky = () => {
+    const scrollTop = window.scrollY;
+    let number = headerRef.current.style.display === "" ? 120 : 175;
+    console.log(headerRef.current.style.display);
+    const stickyClass = scrollTop >= number ? styles.isSticky : "";
+    setSticky(stickyClass);
+  };
+
   const show = () => {
     setSideBar(true);
     setTimeout(() => {
@@ -112,7 +112,11 @@ const Header = () => {
           </ul>
         </div>
       </div>
-      <div className={styles.headerOne}>
+      <div
+        ref={headerRef}
+        style={{ display: "flex" }}
+        className={styles.headerOne}
+      >
         <div>
           <div>
             <i className="fa fa-envelope"></i> info@konstruk.com
