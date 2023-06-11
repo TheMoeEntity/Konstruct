@@ -9,25 +9,23 @@ import one3 from "../../public/images/one3.png";
 import { useInView } from "react-intersection-observer";
 import { useState, useEffect } from "react";
 const About = () => {
-  const {ref,inView} = useInView()
-  const [visible, setVisible] = useState(false)
+  const { ref, inView } = useInView();
+  const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    
     if (inView) {
-      setVisible(true)
+      setVisible(true);
     }
 
-    if (!inView) {
-      setVisible(false)
-    }
-  
-  }, [inView])
-  
+    // if (!inView) {
+    //   setVisible(false);
+    // }
+  }, [inView]);
+
   return (
-    <div ref={ref} className={styles.about}>
+    <div className={styles.about}>
+      <div ref={ref} className={styles.test}></div>
       <div className={styles.cards}>
-        
         <div>
           <div style={{ width: "60px", height: "60px" }}>
             <Image
@@ -51,8 +49,7 @@ const About = () => {
           </div>
         </div>
 
-
-         <div>
+        <div>
           <div style={{ width: "60px", height: "60px" }}>
             <Image
               src={one2}
@@ -74,7 +71,6 @@ const About = () => {
             </p>
           </div>
         </div>
-
 
         <div>
           <div style={{ width: "60px", height: "60px" }}>
@@ -100,9 +96,10 @@ const About = () => {
         </div>
       </div>
 
-
       <div className={styles.main}>
-        <div className={visible ? `${styles.man} ${styles.animClass}`: styles.man}>
+        <div
+          className={visible ? `${styles.man} ${styles.animClass}` : styles.man}
+        >
           <Image
             src={man}
             objectFit="cover"
@@ -113,7 +110,11 @@ const About = () => {
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </div>
-        <div className={visible ? `${styles.stuff} ${styles.animClass2}`: styles.stuff}>
+        <div
+          className={
+            visible ? `${styles.stuff} ${styles.animClass2}` : styles.stuff
+          }
+        >
           <div className={styles.img}>
             <div>
               <Image
