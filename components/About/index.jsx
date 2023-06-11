@@ -6,9 +6,26 @@ import shape from "../../public/images/shape-1.png";
 import one1 from "../../public/images/one1.png";
 import one2 from "../../public/images/one2.png";
 import one3 from "../../public/images/one3.png";
+import { useInView } from "react-intersection-observer";
+import { useState, useEffect } from "react";
 const About = () => {
+  const {ref,inView} = useInView()
+  const [visible, setVisible] = useState(false)
+
+  useEffect(() => {
+    
+    if (inView) {
+      setVisible(true)
+    }
+
+    if (!inView) {
+      setVisible(false)
+    }
+  
+  }, [inView])
+  
   return (
-    <div className={styles.about}>
+    <div ref={ref} className={styles.about}>
       <div className={styles.cards}>
         
         <div>
@@ -82,8 +99,10 @@ const About = () => {
           </div>
         </div>
       </div>
+
+
       <div className={styles.main}>
-        <div>
+        <div className={visible ? `${styles.man} ${styles.animClass}`: styles.man}>
           <Image
             src={man}
             objectFit="cover"
@@ -94,7 +113,7 @@ const About = () => {
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </div>
-        <div className={styles.stuff}>
+        <div className={visible ? `${styles.stuff} ${styles.animClass2}`: styles.stuff}>
           <div className={styles.img}>
             <div>
               <Image

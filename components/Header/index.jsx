@@ -6,7 +6,6 @@ import Link from "next/link";
 
 const Header = () => {
   const [sidebar, setSideBar] = useState(false);
-  const [content, setContent] = useState(false);
   const sideContent = useRef(null);
   const [sticky, setSticky] = useState("");
   const headerRef = useRef(null);
