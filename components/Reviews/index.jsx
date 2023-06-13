@@ -14,7 +14,7 @@ import Image from "next/image";
 const Reviews = () => {
   const [sliderRef] = useKeenSlider({
     loop: true,
-  });
+  }); 
   const test = useRef(null);
   const slide2 = useRef(null);
   const main = useRef(null);
@@ -68,6 +68,36 @@ const Reviews = () => {
       setIndex((x) => x - 1);
       
     }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", animateIn);
+    return () => {
+      window.removeEventListener("scroll", animateIn);
+    };
+  }, []);
+
+  const container = useRef(null);
+  const grid = useRef(null);
+
+  const animateIn = () => {
+    let width = main.current;
+    let height = window.innerHeight;
+    let revealpoint = 120;
+    let revealTop = width.getBoundingClientRect().top;
+    if (revealTop < height - revealpoint) {
+      width.classList.add(styles.addWidth);
+    } else {
+      width.classList.remove(styles.addWidth)
+    }
+
+    let width2 = slide2.current;
+    if (width2.getBoundingClientRect().top < height - revealpoint) {
+      width2.classList.add(styles.addWidth);
+    } else {
+      width2.classList.remove(styles.addWidth);
+    }
+  
   };
 
   return (
