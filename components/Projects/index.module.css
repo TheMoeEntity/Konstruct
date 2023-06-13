@@ -10,7 +10,14 @@
 }
 .caption {
     text-align: center;
+    transition: 0.5s;
+    transform: translateY(80px);
+    opacity: 0;
 } 
+.addWidth {
+    transform: translateY(0);
+    opacity: 1;
+}
 .caption h2 {
     font-size: 35px;
     margin-top: 25px;
@@ -38,6 +45,13 @@
     position: relative;
     cursor: pointer;
     overflow: hidden;
+    transition: 0.5s;
+    transform: translateX(80px);
+    opacity: 0;
+}
+.grid > div.addWidth {
+    transform: translateX(0);
+    opacity: 1;
 }
 .grid > div:hover .overlay {
     opacity: 1;

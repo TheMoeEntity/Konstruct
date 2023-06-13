@@ -100,6 +100,9 @@ const Numbers = () => {
 
   return (
     <div className={styles.numbers}>
+      <div ref={ref} className={styles.test}>
+
+      </div>
       <div className={styles.grid}>
         <div>
           <span>NUMBERS TALK</span>
@@ -108,7 +111,7 @@ const Numbers = () => {
             things complete reality.
           </h2>
           <p>Konstruk will help you get things complete reality.</p>
-          <button ref={ref}>CONTACT NOW</button>
+          <button>CONTACT NOW</button>
         </div>
         <div>
           <div>

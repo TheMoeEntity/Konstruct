@@ -13,6 +13,13 @@
 }
 .caption {
     text-align: center;
+    transition: 0.5s;
+    transform: translateY(80px);
+    opacity: 0;
+}
+.addWidth {
+    transform: translateY(0);
+    opacity: 1;
 }
 .caption h2 {
     font-size: 35px;
@@ -21,13 +28,9 @@
 .grid {
     width: 90%;
     height: auto;
-    /* transform: translate(-50%); */
-    /* left: 50%; */
     margin: 60px auto;
-    /* position: absolute; */
     display: flex;
     flex-flow: row wrap;
-    /* justify-content: space-around; */
     
 }
 
@@ -39,7 +42,10 @@
     position: relative;
     cursor: pointer;
     overflow: hidden;
-    transition: 0.6s ease-in;
+}
+.addWidths {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 .grid > div:hover  {
@@ -142,6 +148,7 @@
     flex-flow: row wrap;
     justify-content: space-between;
     margin-bottom: 0;
+
 }
 .tile > div {
     width: fit-content;
@@ -155,6 +162,14 @@
     font-weight: 600;
     padding: 0 35px;
     cursor: pointer;
+    transition: 0.6s;
+    transform: translateX(70px);
+    opacity: 0;
+}
+
+.addWidth {
+    transform: translateX(0) !important;
+    opacity: 1 !important;
 }
 .tile > div:nth-child(1) {
     background-color: #FFB703;

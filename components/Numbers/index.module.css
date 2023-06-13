@@ -9,6 +9,12 @@
     justify-content: center;
     align-items: center;
     color: white;
+    position: relative;
+}
+.test {
+    position: absolute;
+    top: 60%;
+    left: 0;
 }
 .grid {
     width: 88%;

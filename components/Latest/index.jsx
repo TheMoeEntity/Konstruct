@@ -3,7 +3,7 @@ import Image from "next/image";
 import icon from "../../public/images/service-icon1.png";
 import { AnimatePresence, motion } from "framer-motion";
 import data from "./data";
-import { useRef, useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const Latest = () => {
   const [displayData, setDisplayData] = useState(data);
@@ -53,9 +53,43 @@ const Latest = () => {
       setDisplayData(filteredData);
     }, 300);
   };
+
+
+  useEffect(() => {
+    window.addEventListener("scroll", animateIn);
+    return () => {
+      window.removeEventListener("scroll", animateIn);
+    };
+  }, []);
+
+  const container = useRef(null);
+
+  const animateIn = () => {
+    let width = container.current;
+    let height = window.innerHeight;
+    let revealpoint = 120;
+    let revealTop = width.getBoundingClientRect().top;
+    if (revealTop < height - revealpoint) {
+      width.classList.add(styles.addWidths);
+    }
+
+    let widths = title.current.children;
+
+    for (const child of widths) {
+      let revealTop = child.getBoundingClientRect().top;
+      let revealpoint = 120;
+
+      if (revealTop < height - revealpoint) {
+        child.classList.add(styles.addWidth);
+      } else {
+        child.classList.remove(styles.addWidth);
+      }
+    }
+  
+  };
   return (
     <div className={styles.products}>
-      <div className={styles.caption}>
+      <div ref={container} className={styles.caption}>
         <b>PROJECTS</b>
         <h2>Latest completed projects</h2>
 

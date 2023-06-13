@@ -106,7 +106,9 @@ const Header = () => {
               </span>
             </li>
             <li>Blog</li>
-            <li>Contact</li>
+            <li>
+              <Link href={'/contact'}>Contact</Link>
+            </li>
           </ul>
         </div>
       </div>
