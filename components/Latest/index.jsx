@@ -108,9 +108,9 @@ const Latest = () => {
               style={{ overflow: "hidden" }}
               key={i}
               layout
-              initial={{ transform: "translateY(100px)" }}
-              animate={{ transform: "translateY(0px)" }}
-              exit={{ transform: "translateY(100px)" }}
+              initial={{ transform: "translateY(200px)", opacity:0 }}
+              animate={{ transform: "translateY(0px)", opacity:1 }}
+              exit={{ transform: "translateY(200px)", opacity:0 }}
             >
               <Image
                 src={x.img}
