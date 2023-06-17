@@ -18,6 +18,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-intersection-observer": "^9.4.3",
-    "react-slideshow-image": "^4.2.1"
+    "react-slideshow-image": "^4.2.1",
+    "wowjs": "^1.1.3"
   }
 }
